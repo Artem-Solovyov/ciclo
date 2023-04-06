@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+//base
+@import "./base/reset";
+@import "./base/adaptive-value";
+@import "./base/base";
+@import "./base/vars";
+@import "./base/common";
+
+//libs  
+@import './libs/fullscreenScroll';
+
+//block
+@import './block/page';
+@import './block/screen-01';
+@import './block/screen-02';
+@import './block/screen-03';

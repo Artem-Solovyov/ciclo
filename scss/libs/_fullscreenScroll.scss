@@ -1,0 +1,100 @@
+.page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.page__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.page__section {
+    flex: 1 0 100%;
+    position: relative;
+}
+.page__pagination {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    
+    flex-direction: column;
+    @media (max-width: 767px) {
+            flex-direction: row;
+            
+            
+        }
+}
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical>.swiper-pagination-bullets{
+    @include adaptive-value('left', 120, 7.5, 0);
+    right: 100%;
+    @media (max-width: 767px) {
+            top: auto;
+            bottom: rem(20);
+            left:50%;
+            right: auto;
+            
+        }
+}
+
+.page__bullet {
+    width: rem(5);
+    height: rem(35);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px 0px;
+    transition: background-color 0.5s ease;
+    @media (max-width: 767px) {
+        width: rem(35);
+        height: rem(5);
+        &:not(:last-child){
+            margin-right: 3px;
+        }
+            
+    }
+    
+}
+
+.page__bullet-active {
+    background-color: #050505;
+}
+
+.page__scroll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.page__drag-scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+.wrapper._loaded .page__pagination {
+    // transform: translate(0%, -50%);
+    opacity: 1;
+    visibility: visible;
+    // transition: transform 0.6s ease 0.8s;
+    @media (max-width: 767px) {
+        transform: translate(-50%, 0%);
+    }
+}
+.wrapper._free .page__pagination {
+    transition: all 0.3s ease;
+    transform: translate(50px, -50%);
+    opacity: 0;
+}

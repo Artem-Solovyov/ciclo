@@ -1,0 +1,41 @@
+.section-header {
+
+    &__label {
+        
+        line-height: math.div(31, 25);
+        &:not(:last-child){
+            margin-bottom: em(32, 25);
+        }
+    }
+
+    &__title {
+        @include adaptive-value('font-size', 50, 25, 0);
+        line-height: math.div(75, 60);
+        font-weight: 700;
+        color: $darkcolor;
+        @include adaptive-value('max-width', 469, 274, 0);
+        &_big{
+            @include adaptive-value('max-width', 890, 600, 2);
+        }
+        &:not(:last-child){
+            margin-bottom: em(45, 60);
+            @media (min-width: 1091px) {
+                margin-bottom: em(132, 60);
+            }
+        }
+    }
+    &__text{
+        max-width: rem(540);
+        line-height: math.div(45, 25);
+        @include adaptive-value('font-size', 25, 15, 1);
+    }
+    &_lite{
+        .section-header__text{
+            color: #e3e6ec
+        }
+        .section-header__title{
+            color: #fff;
+            @include adaptive-value('font-size', 60, 35, 0);
+        }
+    }
+}

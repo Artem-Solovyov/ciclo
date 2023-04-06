@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+body {
+    font-family: 'Quicksand', sans-serif;
+    @include adaptive-value('font-size', 25, 18, 0);
+    color: #6a6e77;
+    
+}
+
+.wrapper {
+    // width: 100vw;
+    // overflow: hidden;
+    // height: 100vh;
+}
+
+._container {
+    width: 100%;
+    @include adaptive-value('padding-left', 240, 15, 0);
+    @include adaptive-value('padding-right', 240, 15, 0);
+}

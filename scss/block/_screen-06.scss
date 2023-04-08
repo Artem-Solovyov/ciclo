@@ -1,0 +1,26 @@
+.screen-06 {
+    padding-top: rem(40);
+    padding-bottom: rem(20);
+    &__container {
+        @media (min-width: $tablet) {
+            display: flex;
+            min-height: 100%;
+            align-items: center;
+        }
+    }
+
+    &__section-header {
+        flex: 0 1 50%;
+
+        @media (min-width: $tablet) {
+            padding-right: rem(20);
+        }
+        @media (max-width: $tablet) {
+            padding-bottom: rem(30);
+        }
+    }
+
+    &__services {
+        flex: 0 1 50%;
+    }
+}

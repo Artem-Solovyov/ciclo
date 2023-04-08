@@ -1,0 +1,65 @@
+.screen-11 {
+    position: relative;
+    @media (min-width: 767px) {
+        &::after {
+            content: "";
+            background-color: rgba(196, 196, 196, 0.3);
+            position: absolute;
+            height: 100%;
+            width: 37.5%; /* 720/1920 */
+            left: 0;
+            top: 0;
+        }
+    }
+    &__container {
+        position: relative;
+        z-index: 2;
+        min-height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-top: rem(40);
+        padding-bottom: rem(20);
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+
+    &__items {
+        @media (min-width: 767px) {
+            @include adaptive-value("padding-left", 240, -40, 0);
+        }
+        display: grid;
+        @include adaptive-value("gap", 60, 15, 0);
+        @media (max-width: 767px) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__item {
+        opacity: 0;
+        transition: all 1s;
+        transition-delay: 0s;
+        .swiper-slide-active & {
+            @for $i from 1 through 4 {
+                $delay: $i * 0.25;
+                &:nth-child(#{$i}) {
+                    transition-delay: #{$delay}s;
+                }
+            }
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 32, 12, 0);
+        }
+    }
+
+    &__text {
+    }
+
+    &__image {
+    }
+}

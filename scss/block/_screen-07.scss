@@ -1,43 +1,40 @@
-
-
-.screen-02 {
-
+.screen-07 {
     &__container {
-        
         @media (min-width: 767px) {
             display: flex;
-            align-items: flex-start;
             min-height: 100%;
         }
     }
 
-    &__content {
+    &__services {
         flex: 0 1 50%;
         align-self: center;
         padding-top: rem(40);
         padding-bottom: rem(20);
+
         @media (min-width: 767px) {
             padding-bottom: rem(50);
             padding-right: rem(20);
         }
     }
 
-    &__section-header {}
-
-    &__image{
-        flex: 1 1 50%;
-        
+    &__image {
+        flex: 0 1 50%;
+        position: relative;
         img {
             max-width: 100%;
-            @media (max-width: 767px) {
+        }
+
+        @media (min-width: 767px) {
+            @include adaptive-value("right", -240, -15, 0);
+            img {
+                position: absolute;
                 width: 100%;
-                // max-height: 350px;
+                height: 100%;
+                top: 0;
+                left: 0;
                 object-fit: cover;
-                margin: 0 auto;
             }
-    }
+        }
     }
 }
-
-
-

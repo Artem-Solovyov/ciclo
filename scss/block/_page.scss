@@ -13,7 +13,7 @@
             @include adaptive-value('font-size', 50, 18, 1);
             color: #e3e6ec;
             @media (max-width: 767px) {
-                top: rem(20 );
+                top: rem(25);
                 right: 50%;
             }
         }

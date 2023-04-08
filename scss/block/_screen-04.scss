@@ -1,0 +1,59 @@
+.screen-04 {
+    &__container {
+        display: flex;
+        justify-content: center;
+        min-height: 100%;
+        padding-top: rem(40);
+        padding-bottom: rem(20);
+        flex-direction: column;
+    }
+
+    &__section-header {
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 153, 25, 1);
+        }
+    }
+
+    &__advantages {
+    }
+}
+
+.advantages-screen-04 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(220), 1fr));
+    @include adaptive-value("gap", 50, 20, 1);
+    &__item {
+        opacity: 0;
+        transition: all 1s;
+        transition-delay: 0s;
+        .swiper-slide-active & {
+            @for $i from 1 through 4 {
+                $delay: $i * 0.25;
+                &:nth-child(#{$i}) {
+                    transition-delay: #{$delay}s;
+                }
+            }
+            opacity: 1;
+        }
+    }
+
+    &__icon {
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 26, 10, 1);
+        }
+    }
+
+    &__title {
+        color: #1c1f25;
+        @include adaptive-value("font-size", 30, 20, 1);
+        font-weight: 700;
+        line-height: math.div(38, 30);
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 26, 9, 1);
+        }
+    }
+
+    &__text {
+        line-height: math.div(45, 25);
+    }
+}

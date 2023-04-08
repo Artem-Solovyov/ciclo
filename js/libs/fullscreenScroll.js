@@ -42,7 +42,7 @@ let pageSlider = new Swiper(".page", {
     },
     slideChange: function () {
       menuSliderRemove();
-      menuLinks[pageSlider.realIndex].classList.add("_active");
+      // menuLinks[pageSlider.realIndex].classList.add("_active");
     },
     resize: function () {
       setScrollType();
@@ -78,7 +78,7 @@ function setScrollType() {
     pageSlider.params.freeMode.enabled = false;
   }
   pageSlider.slides.forEach((slide) => {
-    const pageSlideContent = slide.querySelector("._container");
+    const pageSlideContent = slide.querySelector(".c_container");
     if (pageSlideContent) {
       const pageSlideContentHeight = pageSlideContent.offsetHeight;
       if (pageSlideContentHeight > window.innerHeight) {

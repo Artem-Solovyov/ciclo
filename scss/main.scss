@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 //base
 @import "./base/reset";
@@ -6,12 +6,22 @@
 @import "./base/base";
 @import "./base/vars";
 @import "./base/common";
+@import "./base/ibg";
 
-//libs  
-@import './libs/fullscreenScroll';
+//libs
+@import "./libs/fullscreenScroll";
 
 //block
-@import './block/page';
-@import './block/screen-01';
-@import './block/screen-02';
-@import './block/screen-03';
+@import "./block/page";
+@import "./block/screen-01";
+@import "./block/screen-02";
+@import "./block/screen-03";
+@import "./block/screen-04";
+@import "./block/screen-05";
+@import "./block/screen-06";
+@import "./block/screen-07";
+@import "./block/screen-08";
+@import "./block/screen-09";
+@import "./block/screen-10";
+@import "./block/screen-11";
+@import "./block/screen-12";

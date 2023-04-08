@@ -232,7 +232,7 @@ body.loaded {
 
 .services {
   display: grid;
-  gap: calc(20px + 40 * ((100vw - 320px) / 1600));
+  gap: calc(10px + 50 * ((100vw - 320px) / 1600));
 }
 .services__item {
   display: flex;
@@ -271,10 +271,11 @@ body.loaded {
   max-width: 100%;
 }
 .services__title:not(:last-child) {
-  margin-bottom: calc(10px + 22 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(8px + 24 * ((100vw - 320px) / 1600));
 }
 
 .text {
+  font-size: calc(14px + 11 * ((100vw - 320px) / 1600));
   line-height: 1.8;
 }
 
@@ -282,7 +283,7 @@ body.loaded {
   color: #1c1f25;
   font-weight: 700;
   line-height: 1.2666666667;
-  font-size: calc(20px + 10 * ((100vw - 320px) / 1600));
+  font-size: calc(18px + 12 * ((100vw - 320px) / 1600));
 }
 
 .screen-10__body, .item-screen-09__body, .values-screen-03, .section-header__label, .section-header__title, .section-header__text {
@@ -374,17 +375,17 @@ body.loaded {
 }
 
 .page__bullet {
-  width: 0.3125rem;
-  height: 2.1875rem;
+  width: 0.25rem;
+  height: 2.0625rem;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);
-  margin: 10px 0px;
+  margin: 5px 0px;
   transition: background-color 0.5s ease;
 }
 @media (max-width: 767px) {
   .page__bullet {
     width: 1.75rem;
-    height: 0.3125rem;
+    height: 0.1875rem;
   }
 }
 
@@ -701,6 +702,7 @@ body.loaded {
 }
 .advantages-screen-04__text {
   line-height: 1.8;
+  font-size: calc(14px + 11 * ((100vw - 320px) / 1600));
 }
 
 @media (min-width: 767px) {
@@ -740,7 +742,7 @@ body.loaded {
 }
 
 .screen-06 {
-  padding-top: 2.5rem;
+  padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
 @media (min-width: 991.98px) {
@@ -776,7 +778,7 @@ body.loaded {
 .screen-07__services {
   flex: 0 1 50%;
   align-self: center;
-  padding-top: 2.5rem;
+  padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
 @media (min-width: 767px) {

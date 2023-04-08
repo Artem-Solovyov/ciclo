@@ -55,5 +55,6 @@
 
     &__text {
         line-height: math.div(45, 25);
+        @include adaptive-value("font-size", 25, 14, 0);
     }
 }

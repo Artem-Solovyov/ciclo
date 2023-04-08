@@ -45,7 +45,7 @@
 
 .services {
     display: grid;
-    @include adaptive-value("gap", 60, 20, 0);
+    @include adaptive-value("gap", 60, 10, 0);
 
     &__item {
         display: flex;
@@ -82,18 +82,19 @@
 
     &__title {
         &:not(:last-child) {
-            @include adaptive-value("margin-bottom", 32, 10, 0);
+            @include adaptive-value("margin-bottom", 32, 8, 0);
         }
     }
 }
 .text {
+    @include adaptive-value("font-size", 25, 14, 0);
     line-height: math.div(45, 25);
 }
 .title {
     color: #1c1f25;
     font-weight: 700;
     line-height: math.div(38, 30);
-    @include adaptive-value("font-size", 30, 20, 0);
+    @include adaptive-value("font-size", 30, 18, 0);
 }
 
 %animate {
